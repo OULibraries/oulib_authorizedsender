@@ -8,7 +8,7 @@ function oulib_authorizedsender_mail_alter(&$message){
   /**
    * Set Reply-to based on From and override From so mail might actually go through
    */
-  $site_email = variable_get('site_mail', 'libwebdev@ou.edu');
+  $site_email = variable_get('site_mail', '');
   $message['headers']['Reply-to'] = $message['headers']['From'];
   $message['headers']['From']= $site_email;
 }
