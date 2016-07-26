@@ -1,0 +1,4 @@
+name = "OU Libraries Authorized Sender"
+description = "Rejigger headers so that mail comes from an authorized sender."
+core = "7.x"
+
