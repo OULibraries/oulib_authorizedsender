@@ -1,0 +1,4 @@
+name = "OU Libraries Sendmail Config"
+description = "Rejigger headers so we can send email. "
+core = "7.x"
+

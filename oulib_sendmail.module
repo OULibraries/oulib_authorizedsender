@@ -1,0 +1,14 @@
+<?php
+
+/**
+ * Implements hook_mail_alter()
+ */
+function oulib_sendmail_mail_alter(&$message){
+
+  /**
+   * Set Reply-to based on From and override From so mail might actually go through
+   */
+  $site_email = variable_get('site_mail', 'libwebdev@ou.edu');
+  $message['headers']['Reply-to'] = $message['headers']['From'];
+  $message['headers']['From']= $site_email;
+}
