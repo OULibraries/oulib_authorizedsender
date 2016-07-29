@@ -10,5 +10,5 @@ function oulib_authorizedsender_mail_alter(&$message){
    */
   $site_email = variable_get('site_mail', '');
   $message['headers']['Reply-to'] = $message['headers']['From'];
-  $message['headers']['From']= $site_email;
+  $message['headers']['From']= "OU Libraries Web <".$site_email .">";
 }
